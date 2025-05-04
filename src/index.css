@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Stylizacja dla tabletów o orientacji poziomej 1200x2000 px */
+@media (min-width: 1100px) and (max-width: 2100px) and (orientation: landscape) {
+  /* Kontener główny */
+  .tablet-container {
+    padding: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* 3 kolumny na szerokim ekranie tabletów */
+    gap: 2.5rem;
+  }
+
+  /* Stylizacja elementów menu */
+  .menu-item {
+    max-width: 280px;
+    padding: 2.5rem;
+    font-size: 1.75rem; /* Zwiększono rozmiar czcionki */
+  }
+
+  /* Nagłówki */
+  h1,
+  .header {
+    font-size: 3.5rem; /* Zwiększono rozmiar czcionki dla nagłówków */
+    margin-bottom: 2rem;
+  }
+
+  /* Karty produktów */
+  .card {
+    padding: 2rem;
+    border-radius: 0.5rem;
+  }
+
+  /* Obrazki */
+  .card img {
+    max-width: 100%;
+    max-height: 220px; /* Większy obrazek dla lepszej widoczności */
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+
+  /* Przyciski */
+  .button,
+  button {
+    font-size: 1.5rem; /* Zwiększono rozmiar czcionki dla przycisków */
+    padding: 1rem 1.75rem;
+  }
+
+  /* Przyciski nawigacyjne */
+  .sidebar-button {
+    font-size: 1.75rem;
+    padding: 1.75rem;
+  }
+
+  /* Koszyk */
+  .cart-button {
+    font-size: 1.75rem; /* Większy przycisk koszyka */
+    padding: 1.25rem 3rem;
+    background-color: #8da604;
+    color: white;
+    border-radius: 1.5rem;
+  }
+
+  /* Tekst wyboru mięsa */
+  .meat-option {
+    font-size: 1.25rem; /* Większy rozmiar czcionki dla opcji mięsa */
+    padding: 0.75rem 1.5rem;
+    margin: 0.25rem;
+    border: 2px solid #ccc;
+    border-radius: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  .meat-option.selected {
+    border-color: #f8b400;
+    background-color: #fff8e1;
+    font-weight: bold;
+  }
+}
